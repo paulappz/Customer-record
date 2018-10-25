@@ -1,0 +1,18 @@
+<div class="container">
+  <h1 class="text-center">Customer Records Database</h1>
+  <br />
+  <table class="table table-striped main-table">
+    <tr>
+      <th>First Name</th>
+      <th>Last Name</th>
+      <th>Age</th>
+      <th class="text-center">Details</th>
+    </tr>
+    <tr *ngFor="let customer of customers">
+      <td> {{customer.firstName}}</td>
+      <td> {{customer.lastName}}</td>
+      <td> {{customer.age}}</td>
+      <td class="text-center"><a class="btn btn-default btn-primary" (click)=" setSlug(customer.slug)"  id="fill slug" role="button">View Info</a></td>
+    </tr>
+  </table>
+</div>
